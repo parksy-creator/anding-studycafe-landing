@@ -184,6 +184,23 @@ a{text-decoration:none;color:inherit}
 .pk h4{font-size:15px;font-weight:800;margin-top:9px}
 .pk p{color:var(--muted);font-size:12px;margin-top:3px}
 
+/* 인터뷰 숏폼 (9:16) */
+.shorts{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+@media(max-width:1000px){.shorts{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:680px){
+  .shorts{display:flex;overflow-x:auto;gap:12px;padding-bottom:10px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
+  .shorts .sh{flex:0 0 62%;scroll-snap-align:start}
+}
+.sh .frame{position:relative;aspect-ratio:9/16;border-radius:16px;overflow:hidden;background:#e7e5db;border:2px dashed #c3cbc0;display:grid;place-items:center;text-align:center}
+.sh .frame iframe,.sh .frame video{position:absolute;inset:0;width:100%;height:100%;border:0;object-fit:cover}
+.sh .frame .ph{padding:14px}
+.sh .frame .ph .ic{font-size:30px;opacity:.45}
+.sh .frame .ph .t{margin-top:10px;font-size:13px;font-weight:800;color:#8d968b}
+.sh .frame .ph .s{margin-top:4px;font-size:11.5px;color:#a3ab9f;font-weight:600;line-height:1.5}
+.sh .cap{margin-top:12px;font-size:14px;font-weight:800;line-height:1.45}
+.sh .who{margin-top:5px;font-size:12.5px;color:var(--muted);font-weight:600}
+.shorts-note{text-align:center;color:var(--muted);font-size:13.5px;margin-top:24px}
+
 /* 절차 */
 .steps{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
 @media(max-width:900px){.steps{grid-template-columns:repeat(2,1fr)}}
@@ -506,6 +523,83 @@ a{text-decoration:none;color:inherit}
       <div class="pk"><div class="ic">📱</div><h4>단독 앱</h4><p>결제 · 출입 · 예약</p></div>
       <div class="pk"><div class="ic">🤖</div><h4>AI 학습관리</h4><p>무료 제공</p></div>
     </div>
+
+    <!-- ===== 학생 인터뷰 숏폼 (영상 대기) =====
+         영상이 준비되면 각 카드의 <div class="ph">…</div> 블록을 아래 중 하나로 교체하세요.
+
+         · 유튜브 쇼츠 : <iframe src="https://www.youtube.com/embed/영상ID" title="학생 인터뷰" allowfullscreen></iframe>
+         · 직접 업로드 : <video src="assets/interview-01.mp4" controls playsinline poster="assets/interview-01.jpg"></video>
+
+         .cap(한마디)과 .who(누가 말했는지)도 실제 내용으로 바꿔 주세요.
+    -->
+    <div class="sec-head center" style="margin-top:76px;margin-bottom:34px">
+      <span class="kicker">INTERVIEW</span>
+      <h2 style="font-size:27px">학생들에게 직접 물었습니다.</h2>
+      <p style="font-size:15.5px">왜 다른 곳이 아니라 여기로 오는지, 이용 중인 학생들의 이야기입니다.</p>
+    </div>
+
+    <div class="shorts">
+      <article class="sh">
+        <div class="frame">
+          <div class="ph">
+            <div class="ic">▶</div>
+            <div class="t">숏폼 01</div>
+            <div class="s">영상 준비 중<br>세로형 9:16</div>
+          </div>
+        </div>
+        <div class="cap">인터뷰 한마디가 들어갑니다</div>
+        <div class="who">이용 학생 · 지점명</div>
+      </article>
+
+      <article class="sh">
+        <div class="frame">
+          <div class="ph">
+            <div class="ic">▶</div>
+            <div class="t">숏폼 02</div>
+            <div class="s">영상 준비 중<br>세로형 9:16</div>
+          </div>
+        </div>
+        <div class="cap">인터뷰 한마디가 들어갑니다</div>
+        <div class="who">이용 학생 · 지점명</div>
+      </article>
+
+      <article class="sh">
+        <div class="frame">
+          <div class="ph">
+            <div class="ic">▶</div>
+            <div class="t">숏폼 03</div>
+            <div class="s">영상 준비 중<br>세로형 9:16</div>
+          </div>
+        </div>
+        <div class="cap">인터뷰 한마디가 들어갑니다</div>
+        <div class="who">이용 학생 · 지점명</div>
+      </article>
+
+      <article class="sh">
+        <div class="frame">
+          <div class="ph">
+            <div class="ic">▶</div>
+            <div class="t">숏폼 04</div>
+            <div class="s">영상 준비 중<br>세로형 9:16</div>
+          </div>
+        </div>
+        <div class="cap">인터뷰 한마디가 들어갑니다</div>
+        <div class="who">이용 학생 · 지점명</div>
+      </article>
+
+      <article class="sh">
+        <div class="frame">
+          <div class="ph">
+            <div class="ic">▶</div>
+            <div class="t">숏폼 05</div>
+            <div class="s">영상 준비 중<br>세로형 9:16</div>
+          </div>
+        </div>
+        <div class="cap">인터뷰 한마디가 들어갑니다</div>
+        <div class="who">이용 학생 · 지점명</div>
+      </article>
+    </div>
+    <p class="shorts-note">※ 인터뷰 영상 준비 중입니다. (5개 자리 · 세로형 9:16 · 유튜브 쇼츠 또는 직접 업로드 모두 가능)</p>
   </div>
 </section>
 
