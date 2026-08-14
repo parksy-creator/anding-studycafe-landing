@@ -1,0 +1,10 @@
+# 내부 기획·경쟁사 분석 문서는 공개 제외
+00-리뉴얼-진단-및-기획.md
+
+# 로컬 설정
+.claude/
+
+# OS
+Thumbs.db
+desktop.ini
+.DS_Store
