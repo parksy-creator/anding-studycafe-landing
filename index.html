@@ -227,6 +227,34 @@ a{text-decoration:none;color:inherit}
 .sh .who{margin-top:5px;font-size:12.5px;color:var(--muted);font-weight:600}
 .shorts-note{text-align:center;color:var(--muted);font-size:13.5px;margin-top:24px}
 
+/* 점주 인터뷰 영상 카드 */
+.ivlist{display:flex;flex-direction:column;gap:18px;max-width:900px;margin:0 auto}
+.iv{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:26px;align-items:center;
+  background:#fff;border:1px solid var(--line);border-radius:22px;padding:20px}
+.iv .thumb{position:relative;display:block;aspect-ratio:16/9;border-radius:14px;overflow:hidden;background:#e7e5db}
+.iv .thumb img{width:100%;height:100%;object-fit:cover;transition:transform .4s cubic-bezier(.2,.7,.3,1)}
+.iv .thumb:hover img{transform:scale(1.05)}
+.iv .thumb .play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:74px;height:52px;border-radius:14px;
+  background:#ff0000;display:grid;place-items:center;box-shadow:0 6px 18px rgba(0,0,0,.28);transition:.18s}
+.iv .thumb .play::after{content:"";border-style:solid;border-width:11px 0 11px 19px;border-color:transparent transparent transparent #fff;margin-left:4px}
+.iv .thumb:hover .play{background:#e60000;transform:translate(-50%,-50%) scale(1.06)}
+.iv .thumb iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.iv .thumb.soon{display:grid;place-items:center;border:2px dashed #c3cbc0}
+.iv .thumb.soon .ph{text-align:center;color:#8d968b}
+.iv .thumb.soon .ph .ic{font-size:26px;opacity:.45}
+.iv .thumb.soon .ph .t{margin-top:8px;font-size:13px;font-weight:800}
+.iv .txt{text-align:center}
+.iv .tags{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;font-size:14px;font-weight:800;color:var(--green)}
+.iv h3{font-size:29px;font-weight:900;letter-spacing:-.03em;margin-top:12px}
+.iv .who{font-size:16px;color:var(--muted);font-weight:700;margin-top:8px}
+@media(max-width:760px){
+  .iv{grid-template-columns:1fr;gap:16px;padding:16px}
+  .iv h3{font-size:23px}
+  .iv .tags{font-size:13px;gap:6px}
+  .iv .who{font-size:14.5px}
+  .iv .thumb .play{width:60px;height:42px}
+}
+
 /* 절차 */
 .steps{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
 @media(max-width:900px){.steps{grid-template-columns:repeat(2,1fr)}}
@@ -709,10 +737,9 @@ a{text-decoration:none;color:inherit}
       <div class="step"><div class="n">5</div><h4>오픈 · 운영 지원</h4><p>마케팅 · 원격 관리 · 장애 대응</p></div>
     </div>
 
-    <!-- ===== 점주 인터뷰 숏폼 (영상 대기) =====
-         영상이 준비되면 각 카드의 <div class="ph">…</div> 를 아래 중 하나로 교체하세요.
-         · 유튜브 쇼츠 : <iframe src="https://www.youtube.com/embed/영상ID" title="점주 인터뷰" allowfullscreen></iframe>
-         · 직접 업로드 : <video src="assets/owner-01.mp4" controls playsinline poster="assets/owner-01.jpg"></video>
+    <!-- ===== 점주 인터뷰 영상 =====
+         4번째 카드(60대 노후 창업)는 영상 링크 확보 후
+         data-yt="영상ID" 를 채우고 .ph 블록을 지우면 바로 재생됩니다.
     -->
     <div class="sec-head center" style="margin-top:76px;margin-bottom:34px">
       <span class="kicker">OWNER INTERVIEW</span>
@@ -720,34 +747,54 @@ a{text-decoration:none;color:inherit}
       <p style="font-size:15.5px">본사가 하는 말 말고, 실제로 운영 중인 점주님의 이야기를 들어보세요.</p>
     </div>
 
-    <div class="shorts">
-      <article class="sh">
-        <div class="frame"><div class="ph"><div class="ic">▶</div><div class="t">점주 01</div><div class="s">영상 준비 중<br>세로형 9:16</div></div></div>
-        <div class="cap">점주 한마디가 들어갑니다</div>
-        <div class="who">운영 점주 · 지점명</div>
+    <div class="ivlist">
+      <article class="iv">
+        <a class="thumb" href="https://youtu.be/VFICavN7il8" target="_blank" rel="noopener" data-yt="VFICavN7il8" aria-label="40대 중반 창업 · 서울 G지점 점주 인터뷰 영상 재생">
+          <img src="https://img.youtube.com/vi/VFICavN7il8/hqdefault.jpg" alt="서울 G지점 점주 인터뷰" loading="lazy">
+          <span class="play"></span>
+        </a>
+        <div class="txt">
+          <div class="tags"><span>#노후준비</span><span>#은퇴준비</span><span>#투잡</span></div>
+          <h3>40대 중반 창업</h3>
+          <div class="who">서울 G지점 점주님</div>
+        </div>
       </article>
-      <article class="sh">
-        <div class="frame"><div class="ph"><div class="ic">▶</div><div class="t">점주 02</div><div class="s">영상 준비 중<br>세로형 9:16</div></div></div>
-        <div class="cap">점주 한마디가 들어갑니다</div>
-        <div class="who">운영 점주 · 지점명</div>
+
+      <article class="iv">
+        <a class="thumb" href="https://youtu.be/0Rww15AsSCA" target="_blank" rel="noopener" data-yt="0Rww15AsSCA" aria-label="초보 창업 · 서울 I지점 점주 인터뷰 영상 재생">
+          <img src="https://img.youtube.com/vi/0Rww15AsSCA/hqdefault.jpg" alt="서울 I지점 점주 인터뷰" loading="lazy">
+          <span class="play"></span>
+        </a>
+        <div class="txt">
+          <div class="tags"><span>#경력단절</span><span>#전업주부</span><span>#육아</span></div>
+          <h3>초보 창업</h3>
+          <div class="who">서울 I지점 점주님</div>
+        </div>
       </article>
-      <article class="sh">
-        <div class="frame"><div class="ph"><div class="ic">▶</div><div class="t">점주 03</div><div class="s">영상 준비 중<br>세로형 9:16</div></div></div>
-        <div class="cap">점주 한마디가 들어갑니다</div>
-        <div class="who">운영 점주 · 지점명</div>
+
+      <article class="iv">
+        <a class="thumb" href="https://youtu.be/yq3w4EkZv30" target="_blank" rel="noopener" data-yt="yq3w4EkZv30" aria-label="청년 창업 · 경기 K지점 점주 인터뷰 영상 재생">
+          <img src="https://img.youtube.com/vi/yq3w4EkZv30/hqdefault.jpg" alt="경기 K지점 점주 인터뷰" loading="lazy">
+          <span class="play"></span>
+        </a>
+        <div class="txt">
+          <div class="tags"><span>#추가수익</span><span>#초보창업</span><span>#청년창업</span></div>
+          <h3>청년 창업</h3>
+          <div class="who">경기 K지점 점주님</div>
+        </div>
       </article>
-      <article class="sh">
-        <div class="frame"><div class="ph"><div class="ic">▶</div><div class="t">점주 04</div><div class="s">영상 준비 중<br>세로형 9:16</div></div></div>
-        <div class="cap">점주 한마디가 들어갑니다</div>
-        <div class="who">운영 점주 · 지점명</div>
-      </article>
-      <article class="sh">
-        <div class="frame"><div class="ph"><div class="ic">▶</div><div class="t">점주 05</div><div class="s">영상 준비 중<br>세로형 9:16</div></div></div>
-        <div class="cap">점주 한마디가 들어갑니다</div>
-        <div class="who">운영 점주 · 지점명</div>
+
+      <article class="iv">
+        <div class="thumb soon">
+          <div class="ph"><div class="ic">▶</div><div class="t">영상 준비 중</div></div>
+        </div>
+        <div class="txt">
+          <div class="tags"><span>#은퇴창업</span><span>#노후준비</span><span>#무인창업</span></div>
+          <h3>60대 노후 창업</h3>
+          <div class="who">서울 J지점 점주님</div>
+        </div>
       </article>
     </div>
-    <p class="shorts-note">※ 점주 인터뷰 영상 준비 중입니다. (5개 자리 · 세로형 9:16)</p>
   </div>
 </section>
 
@@ -835,6 +882,17 @@ a{text-decoration:none;color:inherit}
 </div>
 
 <script>
+/* 점주 인터뷰 — 썸네일 클릭 시 그 자리에서 재생 (JS 미동작 시 유튜브로 이동) */
+(function(){
+  document.querySelectorAll('.iv .thumb[data-yt]').forEach(function(a){
+    a.addEventListener('click',function(e){
+      e.preventDefault();
+      var id=a.dataset.yt;
+      a.innerHTML='<iframe src="https://www.youtube.com/embed/'+id+'?autoplay=1&rel=0" title="점주 인터뷰" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+    });
+  });
+})();
+
 /* 모바일 메뉴 */
 (function(){
   var n=document.querySelector('.nav'), b=n&&n.querySelector('.navtoggle');
