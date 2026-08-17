@@ -236,16 +236,6 @@ a{text-decoration:none;color:inherit}
 .step h4{font-size:16px;font-weight:800}
 .step p{color:var(--muted);font-size:13px;margin-top:6px}
 
-/* FAQ */
-.faq{max-width:800px;margin:0 auto}
-.qa{background:#fff;border:1px solid var(--line);border-radius:14px;margin-bottom:11px;overflow:hidden}
-.qa .q{width:100%;text-align:left;background:none;border:none;font-family:inherit;font-weight:800;font-size:16px;padding:19px 22px;cursor:pointer;display:flex;justify-content:space-between;gap:12px;color:var(--ink)}
-.qa .q .mk{color:var(--green);transition:.25s;flex:none}
-.qa.open .q .mk{transform:rotate(45deg)}
-.qa .a{max-height:0;overflow:hidden;transition:max-height .3s ease;color:var(--muted);font-size:15px}
-.qa.open .a{max-height:340px}
-.qa .a p{padding:0 22px 20px}
-
 /* 상담 */
 .lead{background:var(--green-deep);color:#fff;padding:84px 0}
 .lead .g{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
@@ -335,7 +325,6 @@ a{text-decoration:none;color:inherit}
     <li><a href="#why">창업 경쟁력</a></li>
     <li><a href="#system">무인 시스템</a></li>
     <li><a href="#step">창업 절차</a></li>
-    <li><a href="#faq">FAQ</a></li>
   </ul>
   <div class="nav-right">
     <a href="#lead" class="btn btn-green">창업 상담</a>
@@ -762,23 +751,6 @@ a{text-decoration:none;color:inherit}
   </div>
 </section>
 
-<!-- ===== FAQ ===== -->
-<section class="sec" id="faq">
-  <div class="wrap">
-    <div class="sec-head center">
-      <span class="kicker">FAQ</span>
-      <h2>자주 묻는 질문</h2>
-    </div>
-    <div class="faq">
-      <div class="qa"><button class="q" onclick="toggleQA(this)">창업비용은 얼마나 드나요?<span class="mk">＋</span></button><div class="a"><p>40평 기준 약 1억 5,000만원입니다. 평수·층 조건·상권에 따라 달라지므로, 상담 시 후보지 기준으로 투자비와 예상 회수기간을 함께 산출해 드립니다.</p></div></div>
-      <div class="qa"><button class="q" onclick="toggleQA(this)">원금 회수까지 얼마나 걸리나요?<span class="mk">＋</span></button><div class="a"><p>40평 기준 약 18.7개월입니다. 타사 동일 평수가 33~34개월인 것과 비교하면 절반 수준인데, 창업비용이 낮고 같은 평수에서 좌석을 더 확보하기 때문입니다.</p></div></div>
-      <div class="qa"><button class="q" onclick="toggleQA(this)">정말 사람 없이 운영되나요?<span class="mk">＋</span></button><div class="a"><p>결제해야 문이 열리는 구조라 상주 인력 없이 24시간 운영됩니다. 냉난방은 AIoT가 자동 관리하고, 매장 상황은 원격으로 확인·제어합니다. 점주님이 하실 일은 주기적인 점검 정도입니다.</p></div></div>
-      <div class="qa"><button class="q" onclick="toggleQA(this)">스터디카페가 이미 포화 아닌가요?<span class="mk">＋</span></button><div class="a"><p>매장 수는 많지만 오래 버티는 매장은 많지 않습니다. 그래서 저희는 "빈 자리"가 아니라 "10년 갈 자리"를 기준으로 상권을 봅니다. 3년 차 지점이 여전히 1,600만원대 매출을 내는 것도 이 기준 때문입니다.</p></div></div>
-      <div class="qa"><button class="q" onclick="toggleQA(this)">오픈 후에는 어떤 지원을 받나요?<span class="mk">＋</span></button><div class="a"><p>원격 관리 시스템, 시스템 장애 대응, 지역 마케팅, 운영 컨설팅, 점주 정기 회의를 지원합니다. 매각이 필요한 시점에는 양도양수까지 함께 준비합니다.</p></div></div>
-    </div>
-  </div>
-</section>
-
 <!-- ===== 상담 ===== -->
 <section class="lead" id="lead">
   <div class="wrap g">
@@ -863,8 +835,6 @@ a{text-decoration:none;color:inherit}
 </div>
 
 <script>
-function toggleQA(b){ b.parentElement.classList.toggle('open'); }
-
 /* 모바일 메뉴 */
 (function(){
   var n=document.querySelector('.nav'), b=n&&n.querySelector('.navtoggle');
