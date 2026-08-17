@@ -116,6 +116,38 @@ a{text-decoration:none;color:inherit}
 .case .open{color:var(--muted);font-size:13.5px;margin-top:4px}
 .case .say{margin:16px 18px 20px;padding-top:14px;border-top:1px solid var(--line);color:var(--muted);font-size:13.5px;line-height:1.55;font-weight:600;min-height:62px}
 
+/* 월별 매출 그래프 */
+.mchart{margin-top:34px;background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px 26px}
+.mtabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px;border-bottom:1px solid var(--line);padding-bottom:16px}
+.mtab{background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:10px 18px;font-family:inherit;font-size:14px;font-weight:800;color:var(--muted);cursor:pointer;transition:.15s}
+.mtab span{font-size:12px;font-weight:700;opacity:.7;margin-left:4px}
+.mtab:hover{border-color:var(--sage);color:var(--ink)}
+.mtab.on{background:var(--green);border-color:var(--green);color:#fff}
+.mtab.on span{opacity:.85}
+.mpanel{display:none}
+.mpanel.on{display:block}
+.mnote{margin-top:16px;color:var(--muted);font-size:13px;text-align:center}
+.mhead{display:flex;justify-content:space-between;align-items:flex-end;gap:14px;flex-wrap:wrap;margin-bottom:26px}
+.mhead .tt{font-size:17px;font-weight:900}
+.mhead .tt span{color:var(--muted);font-size:13.5px;font-weight:700;margin-left:6px}
+.mhead .sum{font-size:13.5px;color:var(--muted);font-weight:700;text-align:right;line-height:1.7}
+.mhead .sum b{color:var(--green-deep);font-size:15px;font-weight:900}
+.bars{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;align-items:end;height:200px}
+.bar{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%}
+.bar .v{font-size:12.5px;font-weight:900;color:var(--green-deep);margin-bottom:6px;white-space:nowrap}
+.bar i{display:block;width:100%;max-width:54px;border-radius:8px 8px 0 0;background:linear-gradient(180deg,var(--sage),var(--green));height:var(--h)}
+.bar.top i{background:linear-gradient(180deg,#d4f552,var(--lime-deep))}
+.bar.top .v{color:var(--gold)}
+.bar .m{margin-top:9px;font-size:12.5px;font-weight:800;color:var(--muted)}
+.mraw{margin-top:16px;padding-top:14px;border-top:1px solid var(--line);color:var(--muted);font-size:12.5px;line-height:1.8;word-break:keep-all}
+@media(max-width:640px){
+  .mchart{padding:22px 16px 18px}
+  .bars{gap:6px;height:170px}
+  .bar .v{font-size:10.5px;margin-bottom:4px}
+  .bar .m{font-size:11px}
+  .mhead .sum{text-align:left}
+}
+
 /* 손익 카드 */
 .pl{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:820px;margin:0 auto}
 @media(max-width:760px){.pl{grid-template-columns:1fr;max-width:460px}}
@@ -385,31 +417,119 @@ a{text-decoration:none;color:inherit}
 
     <div class="cases">
       <article class="case">
+        <div class="hd">서울 B지점</div>
+        <div class="tag">CASE 01 · 3년 차</div>
+        <div class="amt">18,546,500원</div>
+        <div class="lb">26년 6월 매출</div>
+        <div class="open">23년 2월 오픈 · 3년 차</div>
+        <div class="say">"가장 오래된 매장이 가장 많이 법니다. 오픈빨이 아니라는 증거입니다."</div>
+      </article>
+      <article class="case">
         <div class="hd">서울 J지점</div>
-        <div class="tag">CASE 01 · 초기 안착</div>
-        <div class="amt">18,880,000원</div>
-        <div class="lb">25년 6월 매출</div>
-        <div class="open">25년 5월 오픈 · 1개월 차</div>
-        <div class="say">"첫 달부터 1,800만원대. 상권을 먼저 고른 결과입니다."</div>
+        <div class="tag">CASE 02 · 1년 차</div>
+        <div class="amt">17,366,000원</div>
+        <div class="lb">26년 6월 매출</div>
+        <div class="open">25년 6월 오픈 · 1년 차</div>
+        <div class="say">"첫해부터 1,700만원대. 상권을 먼저 고른 결과입니다."</div>
       </article>
       <article class="case">
         <div class="hd">서울 G지점</div>
-        <div class="tag">CASE 02 · 수익성</div>
-        <div class="amt">18,508,000원</div>
-        <div class="lb">25년 6월 매출</div>
-        <div class="open">25년 2월 오픈 · 5개월 차</div>
-        <div class="say">"1~8월 영업이익률 약 80%. 남는 돈까지 아래에 공개합니다."</div>
-      </article>
-      <article class="case">
-        <div class="hd">서울 B지점</div>
-        <div class="tag">CASE 03 · 지속성</div>
-        <div class="amt">16,359,000원</div>
-        <div class="lb">25년 6월 매출</div>
-        <div class="open">23년 2월 오픈 · 3년 차</div>
-        <div class="say">"오픈빨이 끝나고도 1,600만원대. 이게 상권의 힘입니다."</div>
+        <div class="tag">CASE 03 · 2년 차</div>
+        <div class="amt">16,164,500원</div>
+        <div class="lb">26년 6월 매출</div>
+        <div class="open">25년 1월 오픈 · 2년 차</div>
+        <div class="say">"월세 200만원 미만으로 이 매출. 남는 돈은 아래에서 확인하세요."</div>
       </article>
     </div>
-    <p class="note">※ 전 지점 월세 200만원 미만 · 2025년 6월 실제 정산 기준</p>
+    <!-- 지점별 월별 매출 (2026년 1~6월) -->
+    <div class="mchart">
+      <div class="mtabs">
+        <button class="mtab on" type="button" data-m="b">서울 B지점 <span>3년 차</span></button>
+        <button class="mtab" type="button" data-m="j">서울 J지점 <span>1년 차</span></button>
+        <button class="mtab" type="button" data-m="g">서울 G지점 <span>2년 차</span></button>
+        <button class="mtab" type="button" data-m="y">서울 Y지점</button>
+      </div>
+
+      <div class="mpanel on" id="m-b">
+        <div class="mhead">
+          <div class="tt">서울 B지점<span>2026년 1~6월 · 23년 2월 오픈</span></div>
+          <div class="sum">6개월 합계 <b>74,969,000원</b><br>월 평균 <b>12,494,833원</b></div>
+        </div>
+        <div class="bars">
+          <div class="bar"><span class="v">923만</span><i style="--h:50%"></i><span class="m">1월</span></div>
+          <div class="bar"><span class="v">796만</span><i style="--h:43%"></i><span class="m">2월</span></div>
+          <div class="bar"><span class="v">1,276만</span><i style="--h:69%"></i><span class="m">3월</span></div>
+          <div class="bar"><span class="v">1,580만</span><i style="--h:85%"></i><span class="m">4월</span></div>
+          <div class="bar"><span class="v">1,066만</span><i style="--h:57%"></i><span class="m">5월</span></div>
+          <div class="bar top"><span class="v">1,855만</span><i style="--h:100%"></i><span class="m">6월</span></div>
+        </div>
+        <p class="mraw">
+          정확한 금액 (원) — 1월 9,230,000 · 2월 7,964,000 · 3월 12,763,500 · 4월 15,803,500 · 5월 10,661,500 · 6월 18,546,500<br>
+          <b>1월 923만 → 6월 1,855만.</b> 오픈 3년 차 매장이 올해 들어 두 배로 올랐습니다.
+        </p>
+      </div>
+
+      <div class="mpanel" id="m-j">
+        <div class="mhead">
+          <div class="tt">서울 J지점<span>2026년 1~6월 · 25년 6월 오픈</span></div>
+          <div class="sum">6개월 합계 <b>95,563,000원</b><br>월 평균 <b>15,927,167원</b></div>
+        </div>
+        <div class="bars">
+          <div class="bar"><span class="v">1,539만</span><i style="--h:75%"></i><span class="m">1월</span></div>
+          <div class="bar"><span class="v">1,205만</span><i style="--h:58%"></i><span class="m">2월</span></div>
+          <div class="bar top"><span class="v">2,064만</span><i style="--h:100%"></i><span class="m">3월</span></div>
+          <div class="bar"><span class="v">1,515만</span><i style="--h:73%"></i><span class="m">4월</span></div>
+          <div class="bar"><span class="v">1,498만</span><i style="--h:73%"></i><span class="m">5월</span></div>
+          <div class="bar"><span class="v">1,737만</span><i style="--h:84%"></i><span class="m">6월</span></div>
+        </div>
+        <p class="mraw">
+          정확한 금액 (원) — 1월 15,393,000 · 2월 12,047,000 · 3월 20,636,000 · 4월 15,145,000 · 5월 14,976,000 · 6월 17,366,000<br>
+          <b>오픈 1년 차에 월 평균 1,592만원.</b> 3월에는 2,000만원을 넘겼습니다.
+        </p>
+      </div>
+
+      <div class="mpanel" id="m-g">
+        <div class="mhead">
+          <div class="tt">서울 G지점<span>2026년 1~6월 · 25년 1월 오픈</span></div>
+          <div class="sum">6개월 합계 <b>89,905,500원</b><br>월 평균 <b>14,984,250원</b></div>
+        </div>
+        <div class="bars">
+          <div class="bar"><span class="v">1,802만</span><i style="--h:97%"></i><span class="m">1월</span></div>
+          <div class="bar"><span class="v">1,039만</span><i style="--h:56%"></i><span class="m">2월</span></div>
+          <div class="bar"><span class="v">1,407만</span><i style="--h:76%"></i><span class="m">3월</span></div>
+          <div class="bar top"><span class="v">1,860만</span><i style="--h:100%"></i><span class="m">4월</span></div>
+          <div class="bar"><span class="v">1,266만</span><i style="--h:68%"></i><span class="m">5월</span></div>
+          <div class="bar"><span class="v">1,616만</span><i style="--h:87%"></i><span class="m">6월</span></div>
+        </div>
+        <p class="mraw">
+          정확한 금액 (원) — 1월 18,019,500 · 2월 10,390,000 · 3월 14,072,500 · 4월 18,601,500 · 5월 12,657,500 · 6월 16,164,500<br>
+          <b>오픈 2년 차 월 평균 1,498만원.</b> 시험·방학 시즌에 따라 편차가 있습니다.
+        </p>
+      </div>
+
+      <div class="mpanel" id="m-y">
+        <div class="mhead">
+          <div class="tt">서울 Y지점<span>2026년 1~6월</span></div>
+          <div class="sum">6개월 합계 <b>69,816,200원</b><br>월 평균 <b>11,636,033원</b></div>
+        </div>
+        <div class="bars">
+          <div class="bar"><span class="v">1,092만</span><i style="--h:78%"></i><span class="m">1월</span></div>
+          <div class="bar"><span class="v">1,053만</span><i style="--h:75%"></i><span class="m">2월</span></div>
+          <div class="bar"><span class="v">1,156만</span><i style="--h:83%"></i><span class="m">3월</span></div>
+          <div class="bar top"><span class="v">1,396만</span><i style="--h:100%"></i><span class="m">4월</span></div>
+          <div class="bar"><span class="v">1,077만</span><i style="--h:77%"></i><span class="m">5월</span></div>
+          <div class="bar"><span class="v">1,207만</span><i style="--h:86%"></i><span class="m">6월</span></div>
+        </div>
+        <p class="mraw">
+          정확한 금액 (원) — 1월 10,915,500 · 2월 10,533,400 · 3월 11,564,800 · 4월 13,963,900 · 5월 10,769,500 · 6월 12,069,100<br>
+          <b>월별 편차가 가장 작은 매장.</b> 6개월 내내 1,000만원 아래로 떨어진 달이 없습니다.
+        </p>
+      </div>
+
+      <p class="mnote">※ 좋은 달만 골라 보여드리지 않습니다. 네 지점 모두 2026년 1~6월 전체를 그대로 공개합니다.</p>
+    </div>
+
+    <p class="note">※ 전 지점 월세 200만원 미만 · 2026년 6월 실제 정산 기준</p>
   </div>
 </section>
 
@@ -424,36 +544,36 @@ a{text-decoration:none;color:inherit}
 
     <div class="pl">
       <div class="plc">
-        <span class="rate">약 80%</span>
+        <span class="rate">약 82%</span>
         <div class="t">서울 G지점</div>
-        <div class="p">2025년 1월 ~ 8월 실제 데이터</div>
+        <div class="p">2026년 1월 ~ 6월 실제 데이터</div>
         <div class="rows">
-          <div class="r"><span>매출</span><b>106,117,000원</b></div>
-          <div class="r minus"><span>임대료</span><b>− 11,200,000원</b></div>
-          <div class="r minus"><span>관리비 (수도·전기)</span><b>− 4,000,000원</b></div>
-          <div class="r minus"><span>기타 수수료</span><b>− 3,200,000원</b></div>
-          <div class="r minus"><span>기타 잡비 (간식·청소)</span><b>− 3,200,000원</b></div>
+          <div class="r"><span>매출</span><b>89,905,500원</b></div>
+          <div class="r minus"><span>임대료</span><b>− 8,400,000원</b></div>
+          <div class="r minus"><span>관리비 (수도·전기)</span><b>− 3,000,000원</b></div>
+          <div class="r minus"><span>기타 수수료</span><b>− 2,400,000원</b></div>
+          <div class="r minus"><span>기타 잡비 (간식·청소)</span><b>− 2,400,000원</b></div>
         </div>
         <div class="sum">
           <div class="k">총 영업이익</div>
-          <div class="v">84,517,000원</div>
+          <div class="v">73,705,500원</div>
         </div>
       </div>
 
       <div class="plc">
-        <span class="rate">약 74%</span>
+        <span class="rate">약 73%</span>
         <div class="t">서울 Y지점</div>
-        <div class="p">2025년 1월 ~ 8월 실제 데이터</div>
+        <div class="p">2026년 1월 ~ 6월 실제 데이터</div>
         <div class="rows">
-          <div class="r"><span>매출</span><b>94,118,300원</b></div>
-          <div class="r minus"><span>임대료</span><b>− 14,000,000원</b></div>
-          <div class="r minus"><span>관리비 (수도·전기)</span><b>− 4,500,000원</b></div>
-          <div class="r minus"><span>기타 수수료</span><b>− 3,200,000원</b></div>
-          <div class="r minus"><span>기타 잡비 (간식·청소)</span><b>− 3,000,000원</b></div>
+          <div class="r"><span>매출</span><b>69,816,200원</b></div>
+          <div class="r minus"><span>임대료</span><b>− 10,500,000원</b></div>
+          <div class="r minus"><span>관리비 (수도·전기)</span><b>− 3,375,000원</b></div>
+          <div class="r minus"><span>기타 수수료</span><b>− 2,400,000원</b></div>
+          <div class="r minus"><span>기타 잡비 (간식·청소)</span><b>− 2,250,000원</b></div>
         </div>
         <div class="sum">
           <div class="k">총 영업이익</div>
-          <div class="v">69,418,300원</div>
+          <div class="v">51,291,200원</div>
         </div>
       </div>
     </div>
@@ -864,6 +984,21 @@ a{text-decoration:none;color:inherit}
 
 <script>
 function toggleQA(b){ b.parentElement.classList.toggle('open'); }
+
+/* 지점별 월별 매출 탭 */
+(function(){
+  var tabs=[].slice.call(document.querySelectorAll('.mtab'));
+  if(!tabs.length)return;
+  tabs.forEach(function(t){
+    t.addEventListener('click',function(){
+      tabs.forEach(function(x){ x.classList.remove('on'); });
+      t.classList.add('on');
+      document.querySelectorAll('.mpanel').forEach(function(p){ p.classList.remove('on'); });
+      var el=document.getElementById('m-'+t.dataset.m);
+      if(el) el.classList.add('on');
+    });
+  });
+})();
 
 /* 모바일 메뉴 */
 (function(){
