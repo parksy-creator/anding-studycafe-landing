@@ -194,11 +194,13 @@ a{text-decoration:none;color:inherit}
 .aicmp{display:grid;grid-template-columns:1fr auto 1fr;gap:16px;align-items:center;max-width:720px;margin:36px auto 0}
 @media(max-width:640px){.aicmp{grid-template-columns:1fr;gap:10px}}
 .aicmp .b{border-radius:16px;padding:22px 20px;text-align:center;font-weight:800}
+.aicmp .ln{display:block;font-size:13.5px;font-weight:700;margin-top:6px;opacity:.85}
 .aicmp .other{background:#e9e7de;color:#6a6f66}
-.aicmp .other b{display:block;font-size:21px;margin-top:6px;color:#4b504a}
+.aicmp .other b{display:block;font-size:21px;margin-top:10px;color:#4b504a}
 .aicmp .vs{font-weight:900;color:var(--muted)}
 .aicmp .us{background:var(--green);color:#fff}
-.aicmp .us b{display:block;font-size:23px;margin-top:6px;color:var(--lime)}
+.aicmp .us .ln{color:#cfe4cd}
+.aicmp .us b{display:block;font-size:23px;margin-top:10px;color:var(--lime)}
 
 /* AI 학습관리 기능 3종 */
 .aifn{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:820px;margin:30px auto 0}
@@ -618,12 +620,13 @@ a{text-decoration:none;color:inherit}
 
     <div class="sec-head center" style="margin-top:70px;margin-bottom:0">
       <span class="kicker">ONLY ANDING</span>
-      <h2 style="font-size:27px">AI 학습관리, 앤딩은 무료입니다.</h2>
+      <h2 style="font-size:27px">관리형의 효과를,<br>사람 없이 냅니다.</h2>
+      <p style="font-size:15.5px">타사 관리형 스터디카페는 관리 인력을 두고 프로그램 비용까지 냅니다. 앤딩은 AI가 대신하니 그 비용이 0원입니다.</p>
     </div>
     <div class="aicmp">
-      <div class="b other">타사 관리형 스터디카페<b>월 40만원 ↑</b></div>
+      <div class="b other">타사 관리형 스터디카페<span class="ln">유인 운영 + 프로그램 비용</span><b>월 200만원 지출</b></div>
       <div class="vs">VS</div>
-      <div class="b us">앤딩스터디카페 AI 학습관리<b>무료</b></div>
+      <div class="b us">앤딩스터디카페<span class="ln">무인 운영 + AI 학습관리</span><b>월 0원</b></div>
     </div>
 
     <div class="aifn">
