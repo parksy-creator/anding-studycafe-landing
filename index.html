@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>앤딩스터디카페 창업 | 42개 매장 폐점 0% · 원금 회수 18.7개월</title>
-<meta name="description" content="앤딩스터디카페 무인 스터디카페 창업. 40평 기준 창업비용 1억 5천, 월 평균 순수익 800만원, 원금 회수 18.7개월. 실제 지점 매출과 영업이익을 그대로 공개합니다.">
+<title>앤딩스터디카페 창업 | 40평 창업비용 1억 2,260만원 · 원금 회수 18.7개월</title>
+<meta name="description" content="왜 앤딩일까요? 최소 비용으로 시작해 본사가 끝까지 함께합니다. 40평 기준 창업비용 1억 2,260만원, 월 평균 순수익 800만원, 원금 회수 18.7개월. 실제 지점 매출과 영업이익을 그대로 공개합니다.">
 <meta name="keywords" content="무인 스터디카페 창업,스터디카페 창업비용,스터디카페 순수익,소자본 창업,앤딩스터디카페,스터디카페 프랜차이즈,원금 회수기간,상권분석">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://andingstudy.com/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="앤딩스터디카페">
-<meta property="og:title" content="앤딩스터디카페 창업 | 42개 매장 폐점 0%">
-<meta property="og:description" content="40평 기준 창업비용 1억 5천, 원금 회수 18.7개월. 실제 지점 매출과 영업이익을 공개합니다.">
+<meta property="og:title" content="앤딩스터디카페 창업 | 왜 앤딩일까요?">
+<meta property="og:description" content="40평 기준 창업비용 1억 2,260만원, 원금 회수 18.7개월. 실제 지점 매출과 영업이익을 공개합니다.">
 <meta property="og:url" content="https://andingstudy.com/">
 <meta property="og:locale" content="ko_KR">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
@@ -83,7 +83,20 @@ a{text-decoration:none;color:inherit}
 .hero .sub{font-size:18px;color:#e2efe0;margin-top:20px;max-width:620px}
 .hero .cta{margin-top:32px;display:flex;gap:12px;flex-wrap:wrap}
 .hero .src{margin-top:18px;font-size:13px;color:#b7cdb4}
-@media(max-width:640px){.hero{padding:104px 0 54px}.hero h1{font-size:30px}.hero .sub{font-size:15.5px}.hero .cta .btn{flex:1 1 100%}}
+/* 점주케어 UP / 가격 DOWN */
+.updown{display:flex;gap:14px;margin-top:30px;flex-wrap:wrap}
+.ud{display:flex;align-items:center;gap:10px;border-radius:14px;padding:14px 20px;font-size:17px;font-weight:800}
+.ud .ar{font-size:15px}
+.ud.up{background:rgba(200,240,60,.16);color:var(--lime);border:1px solid rgba(200,240,60,.4)}
+.ud.down{background:rgba(239,154,135,.16);color:#ffcdbf;border:1px solid rgba(239,154,135,.45)}
+.ud b{font-size:20px;font-weight:900}
+/* 히어로 3강점 */
+.hpts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:26px;max-width:760px}
+.hpt{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:14px;padding:18px 16px}
+.hpt .n{font-size:17px;font-weight:900;color:var(--lime);letter-spacing:-.02em}
+.hpt .d{font-size:14px;color:#dcebda;margin-top:5px;font-weight:700}
+@media(max-width:760px){.hpts{grid-template-columns:1fr;gap:9px}.hpt{padding:14px 16px;display:flex;align-items:baseline;gap:9px}.hpt .n{font-size:15.5px}.hpt .d{font-size:13.5px;margin-top:0}}
+@media(max-width:640px){.hero{padding:104px 0 54px}.hero h1{font-size:32px}.hero .sub{font-size:16px}.hero .cta .btn{flex:1 1 100%}.updown{gap:9px;margin-top:24px}.ud{padding:11px 15px;font-size:15px;flex:1}.ud b{font-size:17px}}
 
 /* 지표 */
 .stats{background:var(--green-deep);color:#fff;padding:30px 0}
@@ -265,19 +278,52 @@ a{text-decoration:none;color:inherit}
 .foot .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 .foot b{color:#fff;font-size:16px;font-weight:900;display:block;margin-bottom:8px}
 
-/* 하단 고정 상담바 (기존 랜딩 요소 계승) */
-.fixbar{position:fixed;left:0;right:0;bottom:0;z-index:110;background:var(--green-deep);border-top:1px solid rgba(255,255,255,.12);
-  transform:translateY(105%);transition:transform .28s cubic-bezier(.3,.7,.3,1)}
-.fixbar.on{transform:translateY(0)}
-.fixbar .in{max-width:1080px;margin:0 auto;padding:12px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px}
-.fixbar .txt{color:#fff;font-weight:800;font-size:15px}
-.fixbar .txt span{display:block;color:#a9c4a6;font-size:12.5px;font-weight:600;margin-top:2px}
-.fixbar .txt b{color:var(--lime);font-size:19px;letter-spacing:-.02em}
-.fixbar .acts{display:flex;gap:10px;flex:none}
-.fixbar a{font-weight:800;font-size:14px;padding:11px 20px;border-radius:999px;white-space:nowrap;transition:.18s}
-.fixbar .b1{background:rgba(255,255,255,.14);color:#fff}.fixbar .b1:hover{background:rgba(255,255,255,.24)}
-.fixbar .b2{background:var(--lime);color:var(--ink)}.fixbar .b2:hover{background:var(--lime-deep)}
-@media(max-width:640px){.fixbar .txt span{display:none}.fixbar .in{padding:10px 14px;gap:8px}.fixbar a{padding:11px 14px;font-size:13.5px}}
+/* 하단 고정 상담 입력바 (기존 랜딩 방식 계승 · 항상 노출) */
+.fixbar{position:fixed;left:0;right:0;bottom:0;z-index:110;background:var(--green-deep);border-top:2px solid var(--lime)}
+.fixbar .in{max-width:1080px;margin:0 auto;padding:11px 24px;display:flex;align-items:center;gap:14px}
+.fixbar .brand{color:#fff;font-weight:800;font-size:13px;line-height:1.35;flex:none}
+.fixbar .brand b{display:block;color:var(--lime);font-size:23px;font-weight:900;letter-spacing:-.02em;margin-top:1px}
+.fixbar form{display:flex;align-items:center;gap:8px;flex:1;min-width:0;justify-content:flex-end}
+.fixbar input{border:1.5px solid rgba(255,255,255,.25);background:#fff;border-radius:10px;padding:11px 14px;font-size:14px;font-family:inherit;font-weight:600;color:var(--ink);width:170px;min-width:0}
+.fixbar input:focus{outline:none;border-color:var(--lime)}
+.fixbar button{background:var(--lime);color:var(--ink);font-weight:900;font-size:15px;padding:12px 26px;border-radius:10px;border:none;cursor:pointer;font-family:inherit;white-space:nowrap;transition:.18s}
+.fixbar button:hover{background:var(--lime-deep)}
+.fixbar .tel{color:#fff;font-weight:800;font-size:14px;padding:11px 16px;border-radius:10px;background:rgba(255,255,255,.14);white-space:nowrap;display:none}
+/* 우측 플로팅 채널 버튼 */
+.floats{position:fixed;right:16px;top:50%;transform:translateY(-50%);z-index:105;display:flex;flex-direction:column;gap:10px}
+.fl{width:64px;text-align:center;text-decoration:none}
+.fl .ic{width:64px;height:64px;border-radius:50%;background:#fff;border:1px solid var(--line);box-shadow:0 8px 22px rgba(0,0,0,.16);
+  display:grid;place-items:center;font-size:25px;transition:.18s}
+.fl:hover .ic{transform:translateY(-3px);box-shadow:0 12px 26px rgba(0,0,0,.22)}
+.fl .nm{display:block;margin-top:5px;font-size:11px;font-weight:800;color:var(--ink);line-height:1.25;letter-spacing:-.02em}
+.fl.yt .ic{color:#ff0000}
+.fl.ig .ic{background:linear-gradient(45deg,#f9ce34,#ee2a7b 55%,#6228d7);color:#fff}
+.fl.kk .ic{background:#FEE500;color:#3c1e1e;font-weight:900;font-size:19px}
+.fl.bl .ic{background:#03c75a;color:#fff;font-weight:900;font-size:19px}
+@media(max-width:1180px){.floats{right:10px}.fl,.fl .ic{width:52px}.fl .ic{height:52px;font-size:21px}.fl .nm{font-size:10px}}
+@media(max-width:820px){
+  .floats{top:auto;bottom:76px;transform:none;flex-direction:row;right:10px;gap:8px}
+  .fl,.fl .ic{width:46px}.fl .ic{height:46px;font-size:19px;box-shadow:0 6px 16px rgba(0,0,0,.2)}
+  .fl .nm{display:none}
+}
+
+.fixmsg{position:fixed;left:50%;bottom:96px;transform:translateX(-50%);z-index:112;background:#fff;border:1px solid var(--line);border-left:5px solid var(--green);border-radius:14px;
+  padding:16px 20px;font-size:14px;line-height:1.6;max-width:min(560px,92vw);box-shadow:0 18px 44px rgba(0,0,0,.22);display:none}
+.fixmsg.on{display:block}
+.fixmsg b{color:var(--green-deep)}
+.fixmsg a{font-weight:900;color:var(--green);border-bottom:2px solid var(--green)}
+.fixmsg .close{position:absolute;right:10px;top:8px;background:none;border:none;font-size:16px;cursor:pointer;color:var(--muted);font-family:inherit}
+@media(max-width:900px){
+  .fixbar .brand b{font-size:19px}
+  .fixbar input{width:120px}
+  .fixbar button{padding:12px 18px;font-size:14px}
+}
+@media(max-width:640px){
+  .fixbar .in{padding:9px 12px;gap:8px}
+  .fixbar .brand{display:none}
+  .fixbar input{width:auto;flex:1;min-width:0;padding:11px 10px;font-size:13.5px}
+  .fixbar button{padding:11px 14px;font-size:13.5px}
+}
 </style>
 </head>
 <body>
@@ -303,21 +349,32 @@ a{text-decoration:none;color:inherit}
 <header class="hero" id="top">
   <div class="pat"></div>
   <div class="wrap">
-    <span class="kicker">ANDING STUDY CAFE</span>
-    <h1>42개 매장,<br><span class="hl">폐점 0%.</span></h1>
-    <p class="sub">오픈빨은 길어야 석 달입니다. 그래서 앤딩은 신규 매장이 아니라 <b>3년 차 매장의 이번 달 매출</b>을 먼저 보여드립니다. 잘 되는 한 곳을 자랑하는 건 쉽지만, 한 곳도 닫지 않는 건 다른 일입니다.</p>
+    <span class="kicker">WHY ANDING</span>
+    <h1>왜 <span class="hl">앤딩</span>일까요?</h1>
+    <p class="sub"><b>최소 비용</b>으로 시작해, <b>본사가 끝까지</b> 함께하니까.</p>
+
+    <div class="updown">
+      <div class="ud up"><span class="ar">▲</span><span class="tx">점주케어 <b>UP</b></span></div>
+      <div class="ud down"><span class="ar">▼</span><span class="tx">가격 <b>DOWN</b></span></div>
+    </div>
+
+    <div class="hpts">
+      <div class="hpt"><div class="n">1시간 1,000원</div><div class="d">국내 최저가</div></div>
+      <div class="hpt"><div class="n">시스템 매뉴얼로</div><div class="d">지속적 점주케어</div></div>
+      <div class="hpt"><div class="n">발로 뛰는</div><div class="d">실전형 상권분석</div></div>
+    </div>
+
     <div class="cta">
       <a href="#lead" class="btn btn-lime">창업 상담 신청 →</a>
-      <a href="#result" class="btn btn-line">실제 매출 먼저 보기</a>
     </div>
-    <div class="src">* 40평 기준 창업비용 1억 5천 · 월 평균 순수익 800만원 · 원금 회수 18.7개월</div>
+    <div class="src">* 40평 기준 창업비용 1억 2,260만원 · 월 평균 순수익 800만원 · 원금 회수 18.7개월</div>
   </div>
 </header>
 
 <section class="stats">
   <div class="wrap g">
     <div class="it"><div class="n">42<small>개</small></div><div class="l">직영 · 가맹 운영 지점</div></div>
-    <div class="it"><div class="n">0<small>%</small></div><div class="l">누적 폐점률</div></div>
+    <div class="it"><div class="n">80<small>%</small></div><div class="l">영업이익률 (G지점 실제)</div></div>
     <div class="it"><div class="n">18.7<small>개월</small></div><div class="l">원금 회수기간 (40평 기준)</div></div>
     <div class="it"><div class="n">1,000<small>원</small></div><div class="l">시간당 이용료 · 국내 최저가</div></div>
   </div>
@@ -479,7 +536,7 @@ a{text-decoration:none;color:inherit}
 <section class="band">
   <div class="wrap">
     <h2>누구나 열 수 있습니다.<br>문제는 <em>3년 뒤에도 열려 있느냐</em>입니다.</h2>
-    <p>42개 매장 중 문을 닫은 곳은 아직 없습니다. 운이 좋아서가 아니라, 계약 전에 걸러낸 것들이 있기 때문입니다.</p>
+    <p>매출은 오픈 첫 달이 아니라 3년 차에 갈립니다. 그 차이는 계약 전에 무엇을 걸러냈느냐에서 만들어집니다.</p>
   </div>
 </section>
 
@@ -517,7 +574,7 @@ a{text-decoration:none;color:inherit}
     <div class="guide">
       <span class="kicker">THE GUIDE</span>
       <h2>권해 드리기 전에,<br>저희 돈으로 먼저 열었습니다.</h2>
-      <p>점주님께 "이 상권 좋습니다"라고 말하기는 쉽습니다. 그래서 저희는 직영점을 먼저 엽니다. 직접 운영하며 사람이 없어도 돌아가는지, 3년 차에도 매출이 유지되는지 확인한 뒤에야 같은 모델을 권합니다. 검증되지 않은 건 넘기지 않습니다. 2년 만에 40호점을 넘겼는데 폐점이 한 곳도 없는 건, 이 순서를 건너뛰지 않았기 때문입니다.</p>
+      <p>점주님께 "이 상권 좋습니다"라고 말하기는 쉽습니다. 그래서 저희는 직영점을 먼저 엽니다. 직접 운영하며 사람이 없어도 돌아가는지, 3년 차에도 매출이 유지되는지 확인한 뒤에야 같은 모델을 권합니다. 검증되지 않은 건 넘기지 않습니다. 2년 만에 40호점을 넘길 수 있었던 것도 이 순서를 건너뛰지 않았기 때문입니다.</p>
       <div class="sign">무인화연구소 · 앤딩스터디카페</div>
     </div>
   </div>
@@ -722,7 +779,7 @@ a{text-decoration:none;color:inherit}
       <div class="qa"><button class="q" onclick="toggleQA(this)">창업비용은 얼마나 드나요?<span class="mk">＋</span></button><div class="a"><p>40평 기준 약 1억 5,000만원입니다. 평수·층 조건·상권에 따라 달라지므로, 상담 시 후보지 기준으로 투자비와 예상 회수기간을 함께 산출해 드립니다.</p></div></div>
       <div class="qa"><button class="q" onclick="toggleQA(this)">원금 회수까지 얼마나 걸리나요?<span class="mk">＋</span></button><div class="a"><p>40평 기준 약 18.7개월입니다. 타사 동일 평수가 33~34개월인 것과 비교하면 절반 수준인데, 창업비용이 낮고 같은 평수에서 좌석을 더 확보하기 때문입니다.</p></div></div>
       <div class="qa"><button class="q" onclick="toggleQA(this)">정말 사람 없이 운영되나요?<span class="mk">＋</span></button><div class="a"><p>결제해야 문이 열리는 구조라 상주 인력 없이 24시간 운영됩니다. 냉난방은 AIoT가 자동 관리하고, 매장 상황은 원격으로 확인·제어합니다. 점주님이 하실 일은 주기적인 점검 정도입니다.</p></div></div>
-      <div class="qa"><button class="q" onclick="toggleQA(this)">스터디카페가 이미 포화 아닌가요?<span class="mk">＋</span></button><div class="a"><p>매장 수는 많지만 오래 버티는 매장은 많지 않습니다. 그래서 저희는 "빈 자리"가 아니라 "10년 갈 자리"를 기준으로 상권을 봅니다. 42개 매장에서 폐점이 나오지 않은 것도 이 기준 때문입니다.</p></div></div>
+      <div class="qa"><button class="q" onclick="toggleQA(this)">스터디카페가 이미 포화 아닌가요?<span class="mk">＋</span></button><div class="a"><p>매장 수는 많지만 오래 버티는 매장은 많지 않습니다. 그래서 저희는 "빈 자리"가 아니라 "10년 갈 자리"를 기준으로 상권을 봅니다. 3년 차 지점이 여전히 1,600만원대 매출을 내는 것도 이 기준 때문입니다.</p></div></div>
       <div class="qa"><button class="q" onclick="toggleQA(this)">오픈 후에는 어떤 지원을 받나요?<span class="mk">＋</span></button><div class="a"><p>원격 관리 시스템, 시스템 장애 대응, 지역 마케팅, 운영 컨설팅, 점주 정기 회의를 지원합니다. 매각이 필요한 시점에는 양도양수까지 함께 준비합니다.</p></div></div>
     </div>
   </div>
@@ -779,15 +836,36 @@ a{text-decoration:none;color:inherit}
   <div>© 2026 (주)무인화연구소. All rights reserved.</div>
 </div></footer>
 
-<!-- 하단 고정 상담바 -->
+<!-- 우측 플로팅 채널 버튼 -->
+<div class="floats">
+  <a class="fl yt" href="https://www.youtube.com/@muinhwa_TV" target="_blank" rel="noopener" aria-label="무인창업TV 유튜브">
+    <span class="ic">▶</span><span class="nm">무인창업TV</span>
+  </a>
+  <a class="fl ig" href="https://www.instagram.com/muinhwa_lab.official/" target="_blank" rel="noopener" aria-label="앤딩소식 인스타그램">
+    <span class="ic">◎</span><span class="nm">앤딩소식</span>
+  </a>
+  <a class="fl kk" href="http://pf.kakao.com/_xiHlxan/chat" target="_blank" rel="noopener" aria-label="앤딩창업문의 카카오톡 채널">
+    <span class="ic">TALK</span><span class="nm">앤딩창업문의</span>
+  </a>
+  <a class="fl bl" href="https://blog.naver.com/andingstudy" target="_blank" rel="noopener" aria-label="지점정보 네이버 블로그">
+    <span class="ic">blog</span><span class="nm">지점정보</span>
+  </a>
+</div>
+
+<!-- 하단 고정 상담 입력바 -->
 <div class="fixbar" id="fixbar">
   <div class="in">
-    <div class="txt">앤딩스터디카페 가맹문의 <b>1811-9544</b><span>40평 기준 창업비용 1억 5천 · 원금 회수 18.7개월</span></div>
-    <div class="acts">
-      <a class="b1" href="tel:18119544">📞 전화</a>
-      <a class="b2" href="#lead">상담 신청</a>
-    </div>
+    <div class="brand">앤딩스터디카페 가맹문의<b>1811-9544</b></div>
+    <form id="barForm" novalidate>
+      <input type="text" id="bName" placeholder="성함을 입력하세요" autocomplete="name" aria-label="성함">
+      <input type="tel" id="bTel" placeholder="연락처를 입력하세요" autocomplete="tel" aria-label="연락처">
+      <button type="submit">상담신청</button>
+    </form>
   </div>
+</div>
+<div class="fixmsg" id="barMsg" role="status" aria-live="polite">
+  <button class="close" type="button" onclick="document.getElementById('barMsg').classList.remove('on')" aria-label="닫기">✕</button>
+  <span id="barMsgText"></span>
 </div>
 
 <script>
@@ -807,11 +885,19 @@ function toggleQA(b){ b.parentElement.classList.toggle('open'); }
   });
 })();
 
-/* 하단 고정바 — 히어로 지나면 노출 */
+/* 하단 고정 상담바 — 항상 노출, 입력 후 안내 */
 (function(){
-  var bar=document.getElementById('fixbar');
-  function upd(){ bar.classList.toggle('on', window.scrollY>420); }
-  window.addEventListener('scroll',upd,{passive:true}); upd();
+  var f=document.getElementById('barForm'); if(!f)return;
+  var box=document.getElementById('barMsg'), txt=document.getElementById('barMsgText');
+  function show(h){ txt.innerHTML=h; box.classList.add('on'); }
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var name=document.getElementById('bName').value.trim();
+    var tel=document.getElementById('bTel').value.replace(/[^0-9]/g,'');
+    if(!name){ show('성함을 입력해 주세요.'); document.getElementById('bName').focus(); return; }
+    if(tel.length<9){ show('연락처를 정확히 입력해 주세요.'); document.getElementById('bTel').focus(); return; }
+    show('<b>온라인 접수는 준비 중입니다.</b><br>지금은 전화로 바로 상담해 드립니다 — <a href="tel:18119544">1811-9544</a> (평일 10:00~19:00)<br>입력하신 내용은 전송되지 않았습니다.');
+  });
 })();
 
 /* 상담 폼 — 접수 연동 전, 검증 후 전화 안내 */
